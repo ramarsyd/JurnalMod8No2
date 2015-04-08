@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class nomor2 {
+  public static void main(String[] args) {  
+int angka;          
+  
+Scanner input = new Scanner (System.in);          
+ 
+int i, j, min, max;  
+boolean a;  
+  
+System.out.print("Awal = ");  
+min = input.nextInt();  
+System.out.print("Akhir = ");  
+max = input.nextInt();  
+  
+while (min > max)  
+{  
+System.out.print("Batas akhir harus lebih besar dari batas awal.\nMasukkan nilai batas akhir lagi = ");  
+max = input.nextInt();  
+}  
+System.out.println();  
+System.out.println("Deret bilangan Prima antara "+min+"-"+max+"");  
+  
+for (i=min;i<=max;i++)  
+{  
+a=false;  
+if (i==2)  
+a=true;  
+else  
+{  
+for (j=2;j<i;j++)  
+    {  
+if (i%j==0)  
+        {  
+a=false;  
+break;  
+        }  
+else  
+a=true;  
+    }  
+}  
+  
+if (a)  
+{  
+System.out.printf(i+",");  
+}
+}
+  }
+}
+ 
